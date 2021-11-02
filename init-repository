@@ -645,7 +645,8 @@ sub run
 
     $self->check_if_already_initialized;
 
-    chomp(my $url = `git config remote.origin.url`);
+    #chomp(my $url = `git config remote.origin.url`);
+    chomp(my $url = "https://github.com/qt/qt5.git" );
     die("Have no origin remote.\n") if (!$url);
     $url =~ s,\.git$,,;
     $url =~ s/((?:tqtc-)?qt5)$//;
